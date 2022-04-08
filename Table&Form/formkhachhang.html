@@ -5,31 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        th {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <h1>Market Research Survey</h1>
     <p>Please take a few moment to complete this satisfaction survey</p>
+    <hr>
     <form action="">
-        <label for="tuoi">What is your are range?</label>
+        <label for="tuoi"><b>What is your are range?</b></label><br>
+        
         <select name="tuoi" id="">
             <option value="">18-24</option>
             <option value="">25-34</option>
+            <option value="">35-50</option>
+            <option value="">50+</option>
+        </select><br>
+        <hr>
+        <label for="money"><b>What is your yearly income range?</b></label><br>
+        <select name="money" id="">
+            <option value="">$0-$25.000</option>
+            <option value="">$25.000-$50.000</option>
+            <option value="">$50.000-$100.000</option>
+            <option value="">$100.000+</option>
         </select>
-        <p><b>Gender Identity</b></p>
+        <hr>
+        <label for="gender"><b>Gender Identity</b></label><br>
         <input type="radio" name="gender"> <span>Male</span><br>
         <input type="radio" name="gender"> <span>Female</span><br>
         <input type="radio" name="gender"> <span>Nonbinary</span><br>
         <input type="radio" name="gender"> <span>Other</span><br>
         <input type="text"><br>
+        <hr>
 
+        <label for="tien"><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></label><br>
         <input type="checkbox" name="tien" id=""><span>Product1</span><br>
         <input type="checkbox" name="tien" id=""><span>Product2</span><br>
         <input type="checkbox" name="tien" id=""><span>Product3</span><br>
+        <hr>
+        <label for="feature"><b>How often would you use our new product?</b></label><br>
+        <input type="radio" name="feature"><span>Daily</span><br>
+        <input type="radio" name="feature"><span>Weekly</span><br>
+        <input type="radio" name="feature"><span>Monthly</span><br>
+        <hr>
+        <table>
+            <tr><th colspan="4"><label for="pay"><b>What would you pay for the new product?</b></label></th></tr>
+            <tr>
+                <td><label for="pay">$</label></td>
+                <td><input type="text" name="pay"></td>
+                <td><label for="">.</label></td>
+                <td><input type="text" name="pay" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><label for="">Dollar</label></td>
+                <td></td>
+                <td><label for="">cent</label></td>
+            </tr>
+        </table>
+        <hr>
+        <label for="cmt"><b>What features would you like to see in the new product.</b></label><br>
+         
+        <textarea name="comment" id="cmt" cols="200" rows="10"></textarea>  
 
-        <label for="feature">What ...?</label><br>
-        <textarea name="" id="feature" cols="30" rows="10"></textarea>
-        <input type="submit" value="Gửi">
-        <button>GỬi nội dung</button>
+        
+        
+        
+        
+
+
+
+        
 
 
     </form>

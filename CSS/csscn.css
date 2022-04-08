@@ -1,0 +1,20 @@
+#header, #main, #sidebar, #footer{
+    float:left;
+  }
+  #header{
+    width: 100%;
+    background-color:green;
+  }
+   #main{
+     background-color:yellow;
+     width: 70%;
+   }
+   #sidebar{
+     background-color:pink;
+     width:30%;
+   }
+   #footer{
+     background-color:blue;
+     width:100%;
+   }
+  

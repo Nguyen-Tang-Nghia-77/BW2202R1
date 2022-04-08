@@ -23,11 +23,72 @@
             color: black;
         }
         #timkiem1 {
-            text-align: center;
+            vertical-align: top;
+            text-align: left;
+            
         }
         #tk {
             text-align: right;
+            vertical-align: text-top;
+            font-size: 20px;
         }
+
+        header {
+            background-color: white;
+            padding: 0px;
+            
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 15%;
+            height: 1000px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: square;
+            padding: 10%;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        table {
+            width: 100%;
+        }
+        #image {
+            text-align:left;
+            vertical-align: top;
+        }
+        #img {
+            background-position: top, left;
+        }
+
 
     </style>
 </head>
@@ -36,26 +97,27 @@
     
 
     <header>
-        <table>
+        <table  border="1px"> 
             <tr>
-                <th><input type="image" src="https://th.bing.com/th/id/R.32db5efec147b5a6343f46502a6cda8e?rik=1jxJMDFiKbyI4A&pid=ImgRaw&r=0" width="70px" height="70px"></th>
-                <th><h2 id="h2">Wikipedia</h2><p>Bách khoa toàn thư mở</p></th>
-                <th><form action="" id="timkiem1">
-                    <input type="search" id="timkiem" name="timkiem" placeholder="Tìm kiếm wikipedia">
-                    <button type="submit" id="timkiem">Tìm Kiếm</button>
-                </form></th>
+                <th id="img"><input type="image" src="https://th.bing.com/th/id/R.32db5efec147b5a6343f46502a6cda8e?rik=1jxJMDFiKbyI4A&pid=ImgRaw&r=0" width="70px" height="70px" id="image"></th>
+                <th><h2 id="h2">Wikipedia</h2> <p>Bách khoa toàn thư mở</p>
+                    <form action="" id="timkiem1">
+                        <input type="search" id="timkiem" name="timkiem" placeholder="Tìm kiếm wikipedia">
+                        <button type="submit" id="timkiem">Tìm Kiếm</button>
+                </th>
+                <th><a href="#tk" id="tk">Tạo Tài Khoản</a></th>
             </tr>
         </table>
-        <a href="#tk" id="tk">Tạo Tài Khoản</a>
+        
         
     </header>
 
     <section>
         <nav>
             <ul>
-                <li><a href="#"></a>Trang chính</li>
-                <li><a href="#"></a>Nội dung chọn lọc</li>
-                <li><a href="#"></a>Tin tức</li>
+                <li><a href="#">Trang chính</a></li>
+                <li><a href="#">Nội dung chọn lọc</a></li>
+                <li><a href="#">Tin tứ</a>c</li>
             </ul>
         </nav>
 
