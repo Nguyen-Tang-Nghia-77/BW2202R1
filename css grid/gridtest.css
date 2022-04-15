@@ -1,0 +1,22 @@
+.main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20%;
+    background-color: green;
+    padding: 30px;
+    grid-column-gap: 2%;
+}
+
+.main > div {
+    background-color: wheat;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    grid-
+}
+
+
+
+
+
+ 

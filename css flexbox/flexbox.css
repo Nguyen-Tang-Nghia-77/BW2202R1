@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header {
+    position: relative;
+    background-color: green ;
+    margin: 0px;
+    padding: 0px;
+    height: 150px;
+    text-align: center;
+    
+}
+.content {
+    background-color: green;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+}
+.navbar {
+    display: flex;
+    background-color: aqua;
+    height: 50px;
+}
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color: rebeccapurple;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+.sidebar-left {
+    background-color: #1abc9c;
+    flex: 20%;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 30px;
+
+}
+.sidebar-left .img1 {
+    height: 200px;
+    width: 100%;
+    background-color: brown;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img2 {
+    height: 50px;
+    background-color: coral;
+    width: 70%;
+    line-height: 50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img3 {
+    height: 50px;
+    background-color: rosybrown;
+    width: 70%;
+    line-height: 50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+.img4 {
+    height: 50px;
+    background-color: darkgoldenrod;
+    width: 70%;
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}       
+
+.main {
+    background-color: antiquewhite;
+    flex: 80%;
+    line-height: 50px;
+}
+.container {
+    margin-left: 30px;
+}
+.image5 {
+    height: 200px;
+    background-color: chartreuse;
+    width: 90%;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.footer {
+    display: flex;
+    flex: 100%;
+    background-color: blueviolet;
+    height: 55px;
+    position: relative;
+}
+.footer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
