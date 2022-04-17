@@ -4,36 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Baber Shop</title>
+    <title>Baber Shop</title>
     <link rel="stylesheet" href="Babershop.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="Logo"> <img src="img baber/logo baber.jpg" alt="Logo" width="100px" height="100px"></div> 
+    <header id="Home">
+        <div class="Logo"> <img src="images/logo.png" alt="Logo" width="200px" height="100px"></div> 
         
         <div class="content">
-            <h6>Hair Studio</h6>
+            <h1>Hair Studio</h1>
             <p>Style Your Hair Is Style Your Life</p> 
         </div> 
 
-        <div class="container-grid">
-            <div id="item1"><a href="#">Find Out</a> </div>
-            <div id="item2"><a href="#">Read More</a> </div>
+        <div class="banner-button">
+            <a href="#"> <span></span>  Find Out</a>
+            <a href="#"> <span></span> Read More</a>
         </div>
-
-        <aside class="Menu">
-            <i class='bx bx-menu'></i>
-            <ul class="Menu-content">
-                <li>Home</li>
-                <li>Features</li>
-                <li>Services</li>
-                <li>Testimonial</li>
-                <li>Meet Us</li>
-            </ul>
-        </aside>
     </header>
-    <main class="item1">
+
+    <aside id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#item1">Features</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#fter">Meet Us</a></li>
+            </ul>
+        </nav>    
+    </aside>
+    <div id="menu-button">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <script>
+        var menuBtn = document.getElementById("menu-button");
+        var sideNav = document.getElementById("sideNav");
+        var Menu = document.getElementById("menu");
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function() {
+            if(sideNav.style.right =="-250px"){
+                sideNav.style.right = "0";
+                menu.src = "images/close.png"
+            }else{
+                sideNav.style.right = "-250px"
+                menu.src = "images/menu.png"
+            }    
+        }
+        // All animations will take exactly 1000ms
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
+
+    <main id="item1">
         <div class="title-text">
             <p>Features</p>
             <h1>Why Choose Us</h1> 
@@ -71,7 +97,7 @@
                 </div>
             </div>
             <div class="feature-img">
-                <img src="img baber/men-hair-salon-barber-doing-haircut-barbershop-handsome-male-client-hairdresser-high-resolution-men-hair-salon-barber-doing-121115496.jpg" alt="IMG">
+                <img src="images/barber-man.jpg" alt="IMG">
             </div>
         </div>
     </main>
@@ -83,7 +109,7 @@
         </div>
         <div class="service-box">
             <div class="single-service">
-                <img src="img baber/pic-2.jpg" alt="IMG">
+                <img src="images/pic-1.jpg" alt="IMG">
                 <div class="overplay"></div>
                 <div class="service-desc">
                     <h3>Beard Trim</h3>
@@ -93,7 +119,7 @@
             </div>
 
             <div class="single-service">
-                <img src="img baber/pic-2.jpg" alt="IMG">
+                <img src="images/pic-2.jpg" alt="IMG">
                 <div class="overplay"></div>
                 <div class="service-desc">
                     <h3>Hair Cut</h3>
@@ -103,7 +129,7 @@
             </div>
 
             <div class="single-service">
-                <img src="img baber/pic-2.jpg" alt="IMG">
+                <img src="images/pic-3.jpg" alt="IMG">
                 <div class="overplay"></div>
                 <div class="service-desc">
                     <h3>Hair Styling</h3>
@@ -113,7 +139,7 @@
             </div>
 
             <div class="single-service">
-                <img src="img baber/pic-2.jpg" alt="IMG">
+                <img src="images/pic-4.jpg" alt="IMG">
                 <div class="overplay"></div>
                 <div class="service-desc">
                     <h3>Dry Shapoo</h3>
@@ -132,7 +158,7 @@
         <div class="testimonial-row">
             <div class="testimonial-col">
                 <div class="user">
-                    <img src="img baber/pic-4.jpg" alt="">
+                    <img src="images/pic-1.jpg" alt="">
                     <div class="user-info">
                         <h4>Ken Norman <i class='bx bxl-twitter'></i></h4>
                         <small>@kenorman</small>
@@ -143,7 +169,7 @@
 
             <div class="testimonial-col">
                 <div class="user">
-                    <img src="img baber/pic-4.jpg" alt="">
+                    <img src="images/pic-2.jpg" alt="">
                     <div class="user-info">
                         <h4>Karian Nick <i class='bx bxl-twitter'></i></h4>
                         <small>@kkariannick</small>
@@ -154,7 +180,7 @@
 
             <div class="testimonial-col">
                 <div class="user">
-                    <img src="img baber/pic-4.jpg" alt="">
+                    <img src="images/pic-3.jpg" alt="">
                     <div class="user-info">
                         <h4>Diara James <i class='bx bxl-twitter'></i></h4>
                         <small>@diarajame</small>
@@ -164,6 +190,35 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <!-- footer -->
+    <footer id="fter">
+        <img src="images/footer-img.png" alt="" class="fter-img">
+        <div class="title-text">
+            <p>CONTACT</p>
+            <h1>Visit Shop Today</h1>
+        </div>
+
+        <div class="fter-row">
+            <div class="fter-left">
+                <h1>Openning Hour</h1>
+                <p><i class='bx bx-time-five'></i> Monday to Friday- 9am to 9pm</p>
+                <p><i class='bx bx-time-five'></i> Saturday to Sunday- 8am-11pm </p>
+            </div>
+            
+            <div class="fter-right">
+                <h1>Get In Touch</h1>
+                <p>#30 abc Colony, xyz City In <i class='bx bx-map'></i></p>
+                <p>Example@Website.com <i class='bx bx-paperclip'></i></p>
+                <p>+0123456789 <i class='bx bx-mobile'></i></p>
+            </div>
+        </div>
+        <div class="fter-scmlink">
+            <i class='bx bxl-facebook-circle' ></i>
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-youtube' ></i>
+            <p>Copyright Easy Tutorials Youtube Chanel</p>
+        </div>
+    </footer>
 </body>
 </html>
