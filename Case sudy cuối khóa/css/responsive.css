@@ -1,0 +1,181 @@
+@media screen and (max-width: 576px){
+    .header-title p{
+        font-size: 1.4rem;
+    }
+    .featured-row{
+        grid-template-columns: 100% !important;
+    }
+    
+    .services-row{
+        grid-template-columns: 100% !important ;
+    }
+    .test-row{
+        grid-template-columns: 100% !important ;
+    }
+    .footer-row{
+        grid-template-columns: 100% !important;
+    }
+
+    .featured-item, .services-item{
+        margin: 0;
+    }
+    
+    .footer-item{
+        margin: 0 !important;
+        text-align: center;
+    }
+    .social-links{
+        
+        justify-content: center;
+    }
+    .social-links li:nth-child(1){
+        margin-left: 0;
+    }
+    .subscribe-form form{
+        align-items: center;
+    }
+}
+@media screen and (max-width: 768px){
+    
+    .featured-row, .services-row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .test-row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-title h1{
+        font-size: 2.8rem;
+    }
+    .header-form{
+        margin: 50px;
+    }
+    .header-form form{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .header-form .form-control-travel, .header-form .btn-travel{
+        margin: 10px 0.5rem;
+        
+    }
+    .form-control-travel{
+        width: 100%;
+    }
+    /* navbar */
+    #navbar-show-btn{
+        display:inline-block ;
+    }
+    
+    #navbar-collapse-travel {
+        background-color: var(--green);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        padding: 2rem;
+        transform: translateX(100%);
+        transition: var(--trans);
+    }
+    #navbar-close-btn{
+        display: inline-block;
+    }
+    .navbar-nav-travel{
+        display: block !important;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .nav-item-travel{
+        margin: 0;
+        margin-left: 2rem;
+        padding: 20px 0;
+    }
+    /* change on scroll  */
+    .navbar-travel-cng .navbar-nav-travel .nav-link-travel{
+        color: var(--dark); 
+    }
+
+    #dalat {
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.5fr;
+        margin: 0 50px;
+    }
+    .product-item__summary__price{
+        border-left:none !important;
+        padding-top: 0 !important;
+        
+    }
+    .product-item__summary{
+        text-align: center !important;
+    }
+    .featured-row-world{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+        padding-left: 0.3rem ;
+        padding-right: 0.3rem;
+    }
+    .featured-item-world:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .featured-item-world:nth-child(2) {
+        grid-row-start: 2;
+         grid-row-end: 3;
+         grid-column-start: 1;
+        grid-column-end: 2;
+     }
+     .featured-item-world:nth-child(3) {
+        grid-row-start: 2;
+         grid-row-end: 3;
+         grid-column-start: 2;
+        grid-column-end: 3;
+     }
+     .featured-item-world:nth-child(4) {
+        grid-row-start: 3;
+         grid-row-end: 4;
+         grid-column-start: 1;
+        grid-column-end: 2;
+     }
+     .featured-item-world:nth-child(5) {
+         grid-row-start: 3;
+         grid-row-end: 4;
+         grid-column-start: 2;
+         grid-column-end: 3;
+     }
+     .featured-item-world:nth-child(6) {
+         grid-column-start: 1;
+         grid-column-end: 2;
+         grid-row-start: 4;
+         grid-row-end: 5;
+    }
+    .featured-item-world:nth-child(7) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+   .featured-item-world:nth-child(8) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    }
+    .featured-item-world img{
+        width: 100%;
+        height: 100% !important;
+    }
+    #thuysy{
+        bottom: 0 !important;
+    }
+
+
+    
+    
+}

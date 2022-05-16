@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Travel World</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "font/fonts.css">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "css/normalize.css">
+        
+        <link rel = "stylesheet" href = "css/utility.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
+    </head>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+    </script>
+    <body>
+    <!-- navbar  -->
+    <nav class = "navbar-travel">
+        <div class = "container-travel flex-travel">
+            <a href = "index.html" class = "site-brand">
+                Travel<span>World</span>
+            </a>
+
+            <button type = "button" id = "navbar-show-btn" class = "flex-travel">
+                <i class = "fas fa-bars"></i>
+            </button>
+            <div id = "navbar-collapse-travel">
+                <button type = "button" id = "navbar-close-btn" class = "flex-travel">
+                    <i class = "fas fa-times"></i>
+                </button>
+                <ul class = "navbar-nav-travel">
+                    <li class = "nav-item-travel">
+                        <a href = "index.html" class = "nav-link-travel">Home</a>
+                    </li>
+                    <li class = "nav-item-travel">
+                        <a href = "#" class = "nav-link-travel">Gallery</a>
+                    </li>
+                    <li class = "nav-item-travel">
+                        <a href = "#" class = "nav-link-travel">Blog</a>
+                    </li>
+                    <li class = "nav-item-travel">
+                        <a href = "#" class = "nav-link-travel">About</a>
+                    </li>
+                    <li class = "nav-item-travel">
+                        <a href = "#" class = "nav-link-travel">Contact</a>
+                    </li>
+                    <li class = "nav-item-travel">
+                        <a href = "#" class = "nav-link-travel">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- header -->
+    <header class = "flex-travel">
+        <div class = "container-travel">
+            <div class = "header-title">
+                <h1>Trải Nghiệm Kỳ Nghỉ Tuyệt Vời</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum maxime enim odit illum in molestias beatae doloremque, ratione optio.</p>
+            </div>
+            <div class = "header-form">
+                <h2>Choose your Travel location:</h2>
+                <form class = "flex-travel flex-travel__form">
+                    <input type = "text" class = "form-control-travel" placeholder="Chọn điểm đến của bạn">
+                    <input type="date" class = "form-control-travel" placeholder="Date">
+                    <input type="number" class = "form-control-travel" placeholder="Chọn phòng">
+                    <input type="submit" class = "btn-travel" value = "Tìm"  href = "index.html">
+                </form>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- featured section vietnam -->
+    <section id = "featured" class = "py-4">
+        <div class = "container-travel">
+            <div class = "title-wrap">
+                <span class = "sm-title">Lên rừng xuống biển trọn vẹn Việt Nam</span>
+                <h2 class = "lg-title">Điểm đến nổi bật Việt Nam</h2>
+            </div>
+
+            <div class = "featured-row">
+                <div class = "featured-item my-2 shadow">
+                    <img src = "images/Halong.jpg" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            Hạ Long, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item  shadow">
+                    <img src = "images/hagiang.jpg" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            Hà giang, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item my-2 shadow">
+                    <img src = "images/nui-1.png" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            An Giang, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item my-2 shadow">
+                    <img src = "images/banahill.jpeg" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            Đà Nẵng, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item my-2 shadow">
+                    <img src = "images/da-lat-00.jpg" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            Đà Lạt, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item my-2 shadow">
+                    <img src = "images/sapa.jpg" alt = "featured place">
+                    <div class = "featured-item-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            Sapa, Việt Nam
+                        </span>
+                        <div>
+                            <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- future section world -->
+    <section id = "featured" >
+        <div class = "container-travel world">
+            <div class = "title-wrap">
+                <span class = "sm-title">Bao la thế giới bốn bể là nhà</span>
+                <h2 class = "lg-title">Điểm đến yêu thích nước ngoài</h2>
+            </div>
+
+            <div class = "featured-row-world">
+
+                <div class = "featured-item-world">
+                    <img src = "images/thuydien.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Thụy Điển </a>
+                        </span>
+                        
+                            <p class = "text">10.000 lượt khách</p>
+                        
+                    </div>
+                </div>
+
+                <div class = "featured-item-world ">
+                    <img src = "images/thuysi.jpg" style="height:315px ;" alt = "featured place">
+                    <div class = "featured-item-world-content" id="thuysy">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Thụy Sĩ </a>
+                        </span>
+                        <div>
+                            <p class = "text">20.000 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/bali.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Bali</a>
+                        </span>
+                        <div>
+                            <p class = "text">30.000 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/featured-fuvahmulah-maldives.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Madives</a>
+                        </span>
+                        <div>
+                            <p class = "text">30.000 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/thonhiky.jpg" style="height: 315px;" alt = "featured place">
+                    <div class = "featured-item-world-content" id="thuysy">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href="" style="color: white !important;">Thổ Nhĩ Kỳ</a> 
+                        </span>
+                        <div>
+                            <p class = "text">50.500 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/halan.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Hà Lan</a>
+                        </span>
+                        <div>
+                            <p class = "text">50.500 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/italy.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Italy</a>
+                        </span>
+                        <div>
+                            <p class = "text">50.500 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "featured-item-world">
+                    <img src = "images/swinerland.jpg" alt = "featured place">
+                    <div class = "featured-item-world-content">
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                            <a href=""style="color: white !important;">Norway</a>
+                        </span>
+                        <div>
+                            <p class = "text">50.500 lượt khách</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- room hotel -->
+    <div w3-include-html="sale/demo.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+
+    <!-- Service section -->
+    <section id="services" class="py-4">
+        <div class="container-travel">
+            <div class="title-wrap">
+                <h4>KNOW ABOUT SERVICES THAT WE OFFER</h4>
+                <h1>OUR SERVICES</h1>
+            </div>
+            <div class="services-row">
+               <div class="services-item">
+                   <span class="services-icon" >
+                    <i class="fas fa-hotel"></i>
+                   </span>
+                   <h3>Luxurious Hotel</h3>
+                   <p class="text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                   <a href="#" class="btn-travel">Read more</a>
+               </div>
+
+               <div class="services-item">
+                    <span class="services-icon" >
+                    <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <h3>Travel Guide</h3>
+                    <p class="text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                    <a href="#" class="btn-travel">Read more</a>
+                </div>
+
+                <div class="services-item">
+                    <span class="services-icon" >
+                    <i class="fas fa-money-check-alt"></i>
+                    </span>
+                    <h3>Suitable Price</h3>
+                    <p class="text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                    <a href="#" class="btn-travel">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-4">
+        <div class="container-travel">
+            <div class="title-wrap">
+                <span class="sm-title">What our clients say about us</span>
+                <h2 class="lg-title">TESTIMONIALS</h2>
+            </div>
+
+            <div class="test-row">
+                <div class="test-item">
+                    <p class="test">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis, asperiores, velit iste eos officiis tempora magni quaerat quo consectetur expedita cum recusandae facere nam voluptate minus iusto eum. Delectus!
+                    </p>
+                    <div class="test-item-info">
+                        <img src="images/test-1.jpg" alt="Kevin Wilson">
+                        <div>
+                            <h3>Kevin Wilson</h3>
+                            <p class="text">Trip to Da Lat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <p class="test">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis, asperiores, velit iste eos officiis tempora magni quaerat quo consectetur expedita cum recusandae facere nam voluptate minus iusto eum. Delectus!
+                    </p>
+                    <div class="test-item-info">
+                        <img src="images/test-2.jpg" alt="Kevin Wilson">
+                        <div>
+                            <h3>Ben Davis</h3>
+                            <p class="text">Trip to Da Nang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <p class="test">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis, asperiores, velit iste eos officiis tempora magni quaerat quo consectetur expedita cum recusandae facere nam voluptate minus iusto eum. Delectus!
+                    </p>
+                    <div class="test-item-info">
+                        <img src="images/test-3.jpg" alt="Kevin Wilson">
+                        <div>
+                            <h3>Jaura Jones</h3>
+                            <p class="text">Trip to Ha Giang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video section -->
+    <section id="video">
+        <div class="video-wrapper flex-travel">
+            <video loop>
+                <source src="videos/video-section.mp4" type="video/mp4">
+            </video>
+            <button type="button" id="play-btn">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-4">
+        <div class="container-travel footer-row">
+            <div class="footer-item">
+                <a href="#" class="site-brand">Travel <span>World</span> </a>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium reiciendis ipsa suscipit veritatis voluptate.
+                </p>
+            </div>
+
+            <div class="footer-item">
+                <h2>Follow us on:</h2>
+                <ul class="social-links">
+                    <li>
+                        <a href="#"><i class = "fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class = "fab fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class = "fab fa-google-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <h2>Popular Places:</h2>
+                <ul>
+                    <li><a href = "#">Thailand</a></li>
+                    <li><a href = "#">Australia</a></li>
+                    <li><a href = "#">Maldives</a></li>
+                    <li><a href = "#">Switzerland</a></li>
+                    <li><a href = "#">Germany</a></li>
+                </ul>
+            </div>
+
+            <div class="subscribe-form footer-item">
+                <h2>Subscribe for Newsletter!</h2>
+                <form class="flex-travel">
+                    <input type = "email" placeholder="Enter Email" class = "form-control-travel">
+                    <input type = "submit" class = "btn-travel" value = "Subscribe">
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+    
+
+     <!-- js -->
+    <script src = "js/script.js"></script>
+    <!-- Play, Pause video -->
+    <script>
+        let video = document.querySelector('.video-wrapper video');
+        document.getElementById('play-btn').addEventListener('click', () => {
+            if(video.paused){
+                video.play()
+            }else {
+                video.pause();
+            }   
+        })
+    </script>
+    
+    </body>
+</html>
